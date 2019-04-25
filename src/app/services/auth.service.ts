@@ -74,7 +74,6 @@ export class AuthService {
     this._accessToken = '';
     this._idToken = '';
     this._expiresAt = 0;
-    
     this.auth0.logout({
       return_to: window.location.origin
     });

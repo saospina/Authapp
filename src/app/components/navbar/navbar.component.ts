@@ -8,17 +8,17 @@ import { AuthService } from '../../services/auth.service';
 })
 export class NavbarComponent {
 
-  constructor(private auth:AuthService) { 
+  constructor(private auth: AuthService) {
     auth.handleAuthentication();
   }
 
 
 
-  login(){
-    this.auth.login()
+  login() {
+    this.auth.login();
   }
-  exit(){
-    this.auth.logout()
+  exit() {
+    this.auth.logout();
   }
 
 }

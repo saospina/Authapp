@@ -12,17 +12,19 @@
         <a class="nav-link"  [routerLink]="[ 'precios' ]" routerLinkActive="active" >Precios</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link"  [routerLink]="[ 'protegida' ]" routerLinkActive="active" >Protegida</a>
+        <a class="nav-link"  [routerLink]="[ 'protegida' ]" routerLinkActive="active" 
+        *ngIf="auth.isAuthenticated()"
+        >Protegida</a>
       </li>
     </ul>
 
     <span class="navbar-text">
-      <button type="button" class="btn bnt-outline-primary"
+      <button type="button" class="btn bnt-outline-primary btn-sm"
       (click)="login()"
       *ngIf="!auth.isAuthenticated()"
       >Login</button>
 
-      <button type="button" class="btn bnt-outline-primary"
+      <button type="button" class="btn bnt-outline-primary btn-sm"
       (click)="exit()"
       *ngIf="auth.isAuthenticated()"
       >Exit</button>
